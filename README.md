@@ -2,7 +2,7 @@
 
 TextGenius is an on-device AI assistant that makes the web more accessible, private, and efficient. Powered by Gemini Nano and Chrome's Built-in AI APIs, it provides a suite of tools to help users understand, rewrite, and translate web content instantly.
 
-**[Link to Your 3-Minute Demo Video Here]**
+**https://youtu.be/YIofYKSAhJE**
 
 ## The Problem
 The web is full of complex information. Users often face barriers due to difficult language, information overload, or language differences. Cloud-based AI tools can help, but they compromise user privacy, have potential costs, and fail without an internet connection.
