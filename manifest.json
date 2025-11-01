@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "TextGenius - Smart Text Assistant",
+  "version": "1.0.0",
+  "description": "AI-powered reading and writing assistant with one right-click",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "scripting",
+    "sidePanel",
+    "offscreen",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "commands": {
+    "summarize-command": {
+    "suggested_key": {
+      "default": "Alt+Shift+S"
+    },
+    "description": "Summarize selected text"
+  },
+  "rewrite-command": {
+    "suggested_key": {
+      "default": "Alt+Shift+R"
+    },
+    "description": "Rewrite selected text"
+  },
+  "translate": {
+      "suggested_key": {
+        "default": "Alt+Shift+T",
+        "mac": "Command+Shift+T"
+      },
+      "description": "Translate selected text"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open TextGenius",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
